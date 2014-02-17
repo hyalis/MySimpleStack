@@ -26,9 +26,10 @@ public class UneStack implements SimpleStack {
 
 	@Override
 	public String pop() throws EmptyStackException {
-		String popRes = laStack.get(laStack.size());
-		laStack.remove(laStack.size());
-		return popRes;
+		if(laStack.size()>0)
+			return laStack.remove(laStack.size()-1);
+		else
+			return "";
 	}
 
 }

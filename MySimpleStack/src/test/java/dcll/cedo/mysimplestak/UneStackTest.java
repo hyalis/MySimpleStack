@@ -31,12 +31,17 @@ public class UneStackTest extends TestCase {
 		assert(this.maStackDeTest.peek().equals("Hello"));
 	}
 
-	public void testPeek() {
+	public void testPeek() { 
 		assert(this.maStackDeTest.peek().equals("Hello"));
 	}
 
 	public void testPop() {	
 		assert(this.maStackDeTest.pop().equals("Hello"));
+		assert(this.maStackDeTest.pop().equals("Hello"));
+		this.maStackDeTest.push("Coucou");
+		this.maStackDeTest.push("Clement");
+		this.maStackDeTest.push("Edouard");
+		assert(this.maStackDeTest.pop().equals("Edouard"));
 	}
 
 }
